@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audi Login</title>
+    <link rel="stylesheet" href="audi-logo.css">
+</head>
+<body>
+
+    <div class="vinny">
+
+        <img class="b1" src="images/audi3.png" alt="Audi Logo">
+
+        <h2 class="b2">LOGIN</h2>
+        <p class="welcome">Welcome to Audi</p>
+
+        <form onsubmit="return check_form();">
+
+            <label class="b3" for="cc">User Name</label>
+            <input class="b5" type="text" id="cc" name="username"
+                   placeholder="Enter Username" required>
+
+            <label class="b4" for="aa">Password</label>
+            <input class="b6" type="password" id="aa" name="password"
+                   placeholder="Enter Password" required>
+
+            <p class="b8">
+                <a href="forgot-password.html">Forgot Password?</a>
+            </p>
+
+            <input type="submit" class="b7" value="LOGIN">
+
+        </form>
+
+        <p class="footer-text">Progress through Technology</p>
+
+    </div>
+
+    <script>
+        function check_form() {
+
+            var un = document.getElementById("cc").value.trim();
+            var pw = document.getElementById("aa").value;
+
+            if (un === "" || pw.trim() === "") {
+                alert("Please enter both username and password");
+                return false;
+            }
+
+            window.location.href = "welcome.html";
+
+            return false;
+        }
+    </script>
+
+</body>
+</html>
